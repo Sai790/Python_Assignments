@@ -33,5 +33,5 @@ if marks>=0 and marks <=100:
          print("F")        
        
 else:
-     print("invalid input:")   
+     print("wrong input:")   
         
