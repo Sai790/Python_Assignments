@@ -41,7 +41,7 @@ print("Average hourly wage: $",Avg_wage)
 for n in employees:
     name = n[0]
     
-    if n[1] > Avg_wages :
+    if n[2] > Avg_wages :
         print(f"{name} earns more than average")
     else:
         print(f"{name} earns less than average")
