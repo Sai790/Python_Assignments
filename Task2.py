@@ -28,14 +28,15 @@ employees = [
     ("Rahul", 20, 7.00)
 ]
 
-sum_of_all_wages = 0
+sum_of_all_hourly_wages = 0
+number_of_employees =len(employees)
 
 for s in employees:
-    hourly_wage = s[2]
-    sum_of_all_wages= sum_of_all_wages+hourly_wage
+    individual_hourly_wage = s[2]
+    sum_of_all_hourly_wages= sum_of_all_hourly_wages+individual_hourly_wage
 
-Avg_wages = sum_of_all_wages/4
-print("Average hourly wage: $",Avg_wages)
+Avg_wage = sum_of_all_hourly_wages/number_of_employees
+print("Average hourly wage: $",Avg_wage)
 
 for n in employees:
     name = n[0]
