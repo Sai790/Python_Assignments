@@ -1,30 +1,28 @@
-passage = open("passage.txt","r")
+ passage = open("passage.txt", "r")
 str_pass = passage.read()
 
 lower_case = str_pass.lower()
-#print(lower_case)
 
 lis = list(str_pass.split())
-#print(lis)
 
 total_words = len(lis)
-print("Total number of words:-",total_words)
+print("Total number of words:", total_words)
 
-
-count = 0
-diction = {}
+count_dict = {}
 
 for char in lower_case:
-    for j in range(97,123):
-        aii_value = chr(j)
-        if char == aii_value:
-            count += 1
-        diction[aii_value]=count
-print(diction)
+    if char.isalpha():
+        if char in count_dict:
+            count_dict[char] += 1
+        else:
+            count_dict[char] = 1
 
-ratio_diction = {}
+print("Count of each alphabet:", count_dict)
 
-for ke,val in diction.items():
-    value ="{:.2f}".format(val/total_words) 
-    ratio_diction[ke]=value
-print(ratio_diction)
+ratio_dict = {}
+
+for key, value in count_dict.items():
+    ratio = "{:.2%}".format(value / total_words)
+    ratio_dict[key] = ratio
+
+print("Ratio of each alphabet:", ratio_dict)
