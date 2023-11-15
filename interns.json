@@ -1,0 +1,24 @@
+
+{
+    "name": "interns",
+    "interns": [
+        {
+            "id": 1,
+            "first_name": "sai",
+            "middle_name": "kiran",
+            "last_name": "padala"
+        },
+        {
+            "id": 2,
+            "first_name": "ravindra",
+            "middle_name": "naik",
+            "last_name": "banavanthu"
+        },
+        {
+            "id": 3,
+            "first_name": "ravikiran",
+            "middle_name": null,
+            "last_name": "chimirala"
+        }
+    ]
+}
