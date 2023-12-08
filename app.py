@@ -84,6 +84,18 @@ def update_employee(employee_id):
         return {'message': 'Employee not found'}
 
 
+# Route to Delete an Employee by ID
+@app.route('/delete_employee/<int:employee_id>', methods=['DELETE'])
+def delete_employee(employee_id):
+    employee = Employee.query.get(employee_id)
+
+    if employee:
+        db.session.delete(employee)
+        db.session.commit()
+        return {'message': 'Employee deleted successfully'}
+    else:
+        return {'message': 'Employee not found'}
+
 if __name__ == '__main__':
     app.run(debug=True)
 
